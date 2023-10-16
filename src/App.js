@@ -1,25 +1,20 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import { Thead } from "./components/Thead";
+import { Tbody } from "./components/Tbody";
 
-function App() {
+export const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <table>
+        <Thead />
+        <Tbody />
+      </table>
+      <p>
+        Rates are based from 1 USD.
+        <br /> This application uses API from https://currencyfreaks.com.
+        <br />
+        <br /> Created By Muhammad Rafly Chairullah
+      </p>
+    </>
   );
-}
-
-export default App;
+};
